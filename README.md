@@ -17,4 +17,16 @@ POST | \<protocol\>:\/\/\<server:port\>/ledger/transactions | Create a new trans
 PUT | \<protocol\>:\/\/\<server:port\>/ledger/transactions/\<id\> | Update the transaction value for a record.
 DELETE | \<protocol\>:\/\/\<server:port\>/ledger/transactions/\<id\> | Update the soft delete flag for the transaction record without actually deleting it.
 
+## Running Ledger locally
+Ledger is a [Spring Boot](https://spring.io/guides/gs/spring-boot) application built using [Maven](https://spring.io/guides/gs/maven/). You can build a jar file and run it from the command line:
+```
+git clone https://github.com/sriranjan-tadimari/LedgerApplication.git
+cd LedgerApplication
+./mvnw package
+java -jar target/*.jar
+
+P.S. If you face issue when cloning the repo, execute the below statement in git bash and retry cloning the repo.
+git config --global http.sslBackend schannel
+```
+
 
