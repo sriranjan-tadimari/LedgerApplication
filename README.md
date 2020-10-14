@@ -22,8 +22,9 @@ Ledger is a [Spring Boot](https://spring.io/guides/gs/spring-boot) application b
 ```
 git clone https://github.com/sriranjan-tadimari/LedgerApplication.git
 cd LedgerApplication
-./mvnw package
-java -jar target/*.jar
+move mvn .mvn 
+./mvnw -DskipTests package
+java -jar target/LedgerApplication-0.0.1-SNAPSHOT.war
 
 P.S. If you face issue when cloning the repo, execute the below statement in git bash and retry cloning the repo.
 git config --global http.sslBackend schannel
