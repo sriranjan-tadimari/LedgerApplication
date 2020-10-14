@@ -70,3 +70,7 @@ curl -X DELETE http://localhost:8080/ledger/transactions/3
 ```
 curl -H "Content-Type: application/json" -X POST  -d "{\"senderName\":\"Peter\",\"recipientName\":\"Paul\"}" http://localhost:8080/ledger/transactions
 ```
+6. To get the aggregated transaction value for the records that have not been soft deleted
+```
+curl -X GET http://localhost:8080/ledger/transactions/sum-transacted
+```
