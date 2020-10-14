@@ -21,3 +21,10 @@ The following tools must be installed locally to demonstrate OR develop the appl
 * To master constructing RESTful API's.
 * To master the design of CRUD operations.
 * To master understanding of how RESTful API's call Spring JDBCTemplate to perform CRUD operations.
+
+## Instructions
+
+Refer to the [README.MD](https://github.com/sriranjan-tadimari/LedgerApplication/blob/main/README.md) for complete details in installing and 
+configuring the application to run locally.
+
+
