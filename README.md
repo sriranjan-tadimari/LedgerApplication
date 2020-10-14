@@ -52,22 +52,21 @@ Windows and Linux supports using CURL to execute REST calls via Windows Command 
 
 1. To get all the transactions that have not been soft deleted:
 ```
-  curl -X GET http://localhost:8080/ledger/transactions
+curl -X GET http://localhost:8080/ledger/transactions
 ```
 2. To get a specific transaction by id with a value of 1
 ```
-  curl -X GET http://localhost:8080/ledger/transactions/1
+curl -X GET http://localhost:8080/ledger/transactions/1
 ```
 3. To update the transaction value for a specific transaction by id 
 ```
-  curl -X PUT http://localhost:8080/ledger/transactions/1
+curl -X PUT http://localhost:8080/ledger/transactions/1
 ```
 4. To delete the transaction by id with a value of 3
 ```
-  curl -X DELETE http://localhost:8080/ledger/transactions/3
+curl -X DELETE http://localhost:8080/ledger/transactions/3
 ```
 5. To create a new transaction record
 ```
-  curl -H "Content-Type: application/json" -X POST  \
-        -d "{\"senderName\":\"Peter\",\"recipientName\":\"Paul\"}" http://localhost:8080/ledger/transactions
+curl -H "Content-Type: application/json" -X POST  -d "{\"senderName\":\"Peter\",\"recipientName\":\"Paul\"}" http://localhost:8080/ledger/transactions
 ```
