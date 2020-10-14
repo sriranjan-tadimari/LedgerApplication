@@ -17,6 +17,23 @@ POST | \<protocol\>:\/\/\<server:port\>/ledger/transactions | Create a new trans
 PUT | \<protocol\>:\/\/\<server:port\>/ledger/transactions/\<id\> | Update the transaction value for a record.
 DELETE | \<protocol\>:\/\/\<server:port\>/ledger/transactions/\<id\> | Update the soft delete flag for the transaction record without actually deleting it.
 
+## Database configuration
+
+In its default configuration, Ledger uses MySQL database. Please make sure MySQL Server and MySQL Shell is installed.
+
+```
+  1. Open MySQL Shell.
+  2. At the shell prompt type:
+      \connect root@localhost:3306
+  3. Once the connection is established, at the prompt type mysql
+  4. Type the following in sequence and hit enter key after every command
+      * create database ledger_db;
+      * create user 'ledgeruser'@'%' identified by 'LedgerPassword';
+      * grant all on ledger_db.* to 'ledgeruser'@'%';
+```
+Upon application startup the ledger database table is created by the script _/src/main/resources/schema.sql_.
+To change the MySQL server configuration including the port, please update the properties file  _/src/main/resources/application.properties_ before application start.
+
 ## Running Ledger locally
 Ledger is a [Spring Boot](https://spring.io/guides/gs/spring-boot) application built using [Maven](https://spring.io/guides/gs/maven/). You can build a jar file and run it from the command line:
 ```
@@ -29,5 +46,28 @@ java -jar target/LedgerApplication-0.0.1-SNAPSHOT.war
 P.S. If you face issue when cloning the repo, execute the below statement in git bash and retry cloning the repo.
 git config --global http.sslBackend schannel
 ```
+## Usage
 
+Windows and Linux supports using CURL to execute REST calls via Windows Command Prompt or Linux terminal window.
 
+1. To get all the transactions that have not been soft deleted:
+```
+  curl -X GET http://localhost:8080/ledger/transactions
+```
+2. To get a specific transaction by id with a value of 1
+```
+  curl -X GET http://localhost:8080/ledger/transactions/1
+```
+3. To update the transaction value for a specific transaction by id 
+```
+  curl -X PUT http://localhost:8080/ledger/transactions/1
+```
+4. To delete the transaction by id with a value of 3
+```
+  curl -X DELETE http://localhost:8080/ledger/transactions/3
+```
+5. To create a new transaction record
+```
+  curl -H "Content-Type: application/json" -X POST  \
+        -d "{\"senderName\":\"Peter\",\"recipientName\":\"Paul\"}" http://localhost:8080/ledger/transactions
+```
