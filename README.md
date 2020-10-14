@@ -11,3 +11,10 @@ This project is a simple system that acts as a ledger for financial transactions
 REST Method | Rest Endpoint | Endpoint Description
 ------------ | ------------- | -------------------
 GET | \<protocol\>:\/\/\<server:port\>/ledger/transactions | Get all transactions that are not soft deleted.
+GET | \<protocol\>:\/\/\<server:port\>/ledger/transactions/\<id\> | Get a specific transaction record.
+GET | \<protocol\>:\/\/\<server:port\>/ledger/transactions/sum-transacted | Calculate sum of all transacted values that have not been soft deleted.
+POST | \<protocol\>:\/\/\<server:port\>/ledger/transactions | Create a new transaction record.
+PUT | \<protocol\>:\/\/\<server:port\>/ledger/transactions/\<id\> | Update the transaction value for a record.
+DELETE | \<protocol\>:\/\/\<server:port\>/ledger/transactions/\<id\> | Update the soft delete flag for the transaction record without actually deleting it.
+
+
