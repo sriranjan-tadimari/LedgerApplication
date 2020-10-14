@@ -66,11 +66,11 @@ curl -X PUT http://localhost:8080/ledger/transactions/1
 ```
 curl -X DELETE http://localhost:8080/ledger/transactions/3
 ```
-5. To create a new transaction record
-```
-curl -H "Content-Type: application/json" -X POST  -d "{\"senderName\":\"Peter\",\"recipientName\":\"Paul\"}" http://localhost:8080/ledger/transactions
-```
-6. To get the aggregated transaction value for the records that have not been soft deleted
+5. To get the aggregated transaction value for the records that have not been soft deleted
 ```
 curl -X GET http://localhost:8080/ledger/transactions/sum-transacted
+```
+6. To create a new transaction record
+```
+curl -H "Content-Type: application/json" -X POST  -d "{\"senderName\":\"Peter\",\"recipientName\":\"Paul\"}" http://localhost:8080/ledger/transactions
 ```
