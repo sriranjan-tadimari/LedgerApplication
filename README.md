@@ -26,12 +26,12 @@ In its default configuration, Ledger uses MySQL database. Please make sure MySQL
   2. At the shell prompt type:
       \connect root@localhost:3306
   3. Once the connection is established, at the prompt type mysql
-  4. Type the following in sequence and hit enter key after every command
+  4. Execute the following commands in sequence in the same order.
       * create database ledger_db;
       * create user 'ledgeruser'@'%' identified by 'LedgerPassword';
       * grant all on ledger_db.* to 'ledgeruser'@'%';
 ```
-Upon application startup the ledger database table is created by the script _/src/main/resources/schema.sql_.
+Upon application startup the **ledger** database table is created by the script _/src/main/resources/schema.sql_.
 To change the MySQL server configuration including the port, please update the properties file  _/src/main/resources/application.properties_ before application start.
 
 ## Running Ledger locally
@@ -45,6 +45,7 @@ java -jar target/LedgerApplication-0.0.1-SNAPSHOT.war
 
 P.S. If you face issue when cloning the repo, execute the below statement in git bash and retry cloning the repo.
 git config --global http.sslBackend schannel
+P.S. These commands were executed on Window 10 OS. Please make appropriate changes when running on Linux OS.
 ```
 ## Usage
 
