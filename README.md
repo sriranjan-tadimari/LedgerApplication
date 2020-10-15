@@ -29,8 +29,8 @@ In its default configuration, Ledger uses MySQL database. Please make sure MySQL
       * create user ledgeruser@localhost identified by 'LedgerPassword';
       * grant all on ledger_db.* to ledgeruser@localhost;
 ```
-Upon application startup the **ledger** database table is created by the script _/src/main/resources/schema.sql_.
-To change the MySQL server configuration including the port, please update the properties file  _/src/main/resources/application.properties_ before application start.
+Upon application startup the **ledger** database table is created by the script [schema.sql](https://github.com/sriranjan-tadimari/LedgerApplication/blob/main/src/main/resources/schema.sql).
+To change the MySQL server configuration including the port, please update the properties file  [application.properties](https://github.com/sriranjan-tadimari/LedgerApplication/blob/main/src/main/resources/application.properties) before application start.
 
 ## Running Ledger locally
 Ledger is a [Spring Boot](https://spring.io/guides/gs/spring-boot) application built using [Maven](https://spring.io/guides/gs/maven/). You can build a jar file and run it from the command line.
