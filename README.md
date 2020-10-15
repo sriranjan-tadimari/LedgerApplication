@@ -46,11 +46,11 @@ If the git clone command throws an error, execute the below statement in git bas
 ```
 git config --global http.sslBackend schannel
 ```
-These commands were executed on Window 10 OS. Please make appropriate changes when running on Linux OS.
+_These commands were executed on Window 10 OS. Please make appropriate changes when running on Linux OS._
 
 ## Usage
 
-Windows and Linux supports using CURL to execute REST calls via Windows Command Prompt or Linux terminal window.
+Windows and Linux supports using CURL to execute REST calls in Windows Command Prompt or Linux terminal window.
 
 * To get all the transactions that have not been soft deleted:
 ```
@@ -64,7 +64,7 @@ curl -H "Content-Type: application/json" -X POST  -d "{\"senderName\":\"Peter\",
 ```
 curl -X GET http://localhost:8080/ledger/transactions/1
 ```
-* To update the transaction value for a specific transaction by id 
+* To update the transaction value for a specific transaction with id of 1 
 ```
 curl -X PUT http://localhost:8080/ledger/transactions/1
 ```
