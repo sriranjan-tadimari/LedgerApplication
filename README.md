@@ -33,7 +33,7 @@ Upon application startup the **ledger** database table is created by the script 
 To change the MySQL server configuration including the port, please update the properties file  [application.properties](https://github.com/sriranjan-tadimari/LedgerApplication/blob/main/src/main/resources/application.properties) before application start.
 
 ## Running Ledger locally
-Ledger is a [Spring Boot](https://spring.io/guides/gs/spring-boot) application built using [Maven](https://spring.io/guides/gs/maven/). You can build a jar file and run it from the command line.
+Ledger is a [Spring Boot](https://spring.io/guides/gs/spring-boot) application built using [Maven](https://spring.io/guides/gs/maven/). You can build a war file and run it from the command line.
 ```
 git clone https://github.com/sriranjan-tadimari/LedgerApplication.git
 cd LedgerApplication
