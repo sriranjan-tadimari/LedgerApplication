@@ -19,7 +19,7 @@ The following tools must be installed locally to demonstrate OR develop the appl
 
 * To develop a simple Spring Boot microservice with Spring Tool Suite and MySQL.
 * Constructing RESTful API's.
-* Design CRUD operations and implement at the service layer.
+* Design CRUD operations and implement at the DAO layer.
 * Understanding how RESTful API's call Spring JDBCTemplate to perform CRUD operations.
 
 ## Instructions
@@ -34,8 +34,8 @@ configuring the application to run locally.
 * Open the file [LedgerTransactionController.java](https://github.com/sriranjan-tadimari/LedgerApplication/blob/main/src/main/java/com/twou/ledgerapp/controller/LedgerTransactionController.java). 
    * Since the Controller class is the component where the REST API's are implemented, ask the students to recognize the various RESTful method implementations. 
    * Explain the concept of Rest URI's and how they map to the methods. 
-   * Go through each of the REST API methods and explain how database operations are performed via a service layer abstraction(DAO).
+   * Go through each of the REST API methods and explain how database operations are performed via Data Access Object layer.
    * Explain how the service layer component(DAO) is injected into the Controller via AutoWiring.
    * For a pleasent REST API user experience, point out that the implemented methods handle exceptions gracefully and user making a call to the REST API would not be seeing   any sort of Exceptions.
 
-* Open the [LedgerTransactionDAO.java](https://github.com/sriranjan-tadimari/LedgerApplication/blob/main/src/main/java/com/twou/ledgerapp/dao/LedgerTransactionDAO.java) and [LedgerTransactionDAOImpl.java](https://github.com/sriranjan-tadimari/LedgerApplication/blob/main/src/main/java/com/twou/ledgerapp/dao/LedgerTransactionDAOImpl.java) DAO layers and explain to the students how JDBCTemplate is used to perform CRUD operations.
+* Open the [LedgerTransactionDAO.java](https://github.com/sriranjan-tadimari/LedgerApplication/blob/main/src/main/java/com/twou/ledgerapp/dao/LedgerTransactionDAO.java) and [LedgerTransactionDAOImpl.java](https://github.com/sriranjan-tadimari/LedgerApplication/blob/main/src/main/java/com/twou/ledgerapp/dao/LedgerTransactionDAOImpl.java) Data Access Object layer component and explain to the students how JDBCTemplate is used to perform CRUD operations.
