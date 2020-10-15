@@ -22,14 +22,12 @@ DELETE | \<protocol\>:\/\/\<server:port\>/ledger/transactions/\<id\> | Update th
 In its default configuration, Ledger uses MySQL database. Please make sure MySQL Server and MySQL Shell is installed.
 
 ```
-  1. Open MySQL Shell.
-  2. At the shell prompt type:
-      \connect root@localhost:3306
-  3. Once the connection is established, at the prompt type mysql
+  1. Open MySQL Command Line Client. 
+  2. Once you enter the correct, mysql prompt is displayed.
   4. Execute the following commands in sequence in the same order.
       * create database ledger_db;
-      * create user 'ledgeruser'@'%' identified by 'LedgerPassword';
-      * grant all on ledger_db.* to 'ledgeruser'@'%';
+      * create user ledgeruser@localhost identified by 'LedgerPassword';
+      * grant all on ledger_db.* to ledgeruser@localhost;
 ```
 Upon application startup the **ledger** database table is created by the script _/src/main/resources/schema.sql_.
 To change the MySQL server configuration including the port, please update the properties file  _/src/main/resources/application.properties_ before application start.
