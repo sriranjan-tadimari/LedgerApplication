@@ -23,8 +23,8 @@ In its default configuration, Ledger uses MySQL database. Please make sure MySQL
 
 ```
   1. Open MySQL Command Line Client. 
-  2. Once you enter the correct, mysql prompt is displayed.
-  4. Execute the following commands in sequence in the same order.
+  2. Once you enter the correct password, mysql prompt is displayed.
+  4. Execute the following commands in sequence.
       * create database ledger_db;
       * create user ledgeruser@localhost identified by 'LedgerPassword';
       * grant all on ledger_db.* to ledgeruser@localhost;
