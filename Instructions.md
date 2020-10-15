@@ -35,7 +35,7 @@ configuring the application to run locally.
    * Since the Controller class is the component where the REST API's are implemented, ask the students to recognize the various RESTful method implementations. 
    * Explain the concept of Rest URI's and how they map to the methods. 
    * Go through each of the REST API methods and explain how database operations are performed via Data Access Object layer.
-   * Explain how the service layer component(DAO) is injected into the Controller via AutoWiring.
+   * Explain how the Data Access Object layer component is injected into the Controller via AutoWiring.
    * For a pleasent REST API user experience, point out that the implemented methods handle exceptions gracefully and user making a call to the REST API would not be seeing   any sort of Exceptions.
 
 * Open the [LedgerTransactionDAO.java](https://github.com/sriranjan-tadimari/LedgerApplication/blob/main/src/main/java/com/twou/ledgerapp/dao/LedgerTransactionDAO.java) and [LedgerTransactionDAOImpl.java](https://github.com/sriranjan-tadimari/LedgerApplication/blob/main/src/main/java/com/twou/ledgerapp/dao/LedgerTransactionDAOImpl.java) Data Access Object layer component and explain to the students how JDBCTemplate is used to perform CRUD operations.
