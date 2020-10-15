@@ -49,27 +49,27 @@ P.S. These commands were executed on Window 10 OS. Please make appropriate chang
 
 Windows and Linux supports using CURL to execute REST calls via Windows Command Prompt or Linux terminal window.
 
-1. To get all the transactions that have not been soft deleted:
+* To get all the transactions that have not been soft deleted:
 ```
 curl -X GET http://localhost:8080/ledger/transactions
 ```
-2. To get a specific transaction by id with a value of 1
+* To create a new transaction record
+```
+curl -H "Content-Type: application/json" -X POST  -d "{\"senderName\":\"Peter\",\"recipientName\":\"Paul\"}" http://localhost:8080/ledger/transactions
+```
+* To get a specific transaction by id with a value of 1
 ```
 curl -X GET http://localhost:8080/ledger/transactions/1
 ```
-3. To update the transaction value for a specific transaction by id 
+* To update the transaction value for a specific transaction by id 
 ```
 curl -X PUT http://localhost:8080/ledger/transactions/1
 ```
-4. To delete the transaction by id with a value of 3
+* To delete the transaction by id with a value of 3
 ```
 curl -X DELETE http://localhost:8080/ledger/transactions/3
 ```
-5. To get the aggregated transaction value for the records that have not been soft deleted
+* To get the aggregated transaction value for the records that have not been soft deleted
 ```
 curl -X GET http://localhost:8080/ledger/transactions/sum-transacted
-```
-6. To create a new transaction record
-```
-curl -H "Content-Type: application/json" -X POST  -d "{\"senderName\":\"Peter\",\"recipientName\":\"Paul\"}" http://localhost:8080/ledger/transactions
 ```
